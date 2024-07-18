@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./NavigationBar.module.css";
 
 export default function NavigationBar() {
@@ -7,10 +7,25 @@ export default function NavigationBar() {
       <nav>
         <ul className={classes.list}>
           <li>
-            <Link to="/">Homepage</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Homepage
+            </NavLink>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Products
+            </NavLink>
           </li>
         </ul>
       </nav>

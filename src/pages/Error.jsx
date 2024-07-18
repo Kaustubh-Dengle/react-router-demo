@@ -1,12 +1,12 @@
-import { Outlet } from "react-router-dom";
 import NavigationBar from "../components/NavigationBar";
 
-export default function RootLayout() {
+export default function Error() {
   return (
     <>
       <NavigationBar />
       <main>
-        <Outlet />
+        <h1>An Error occured</h1>
+        <p>Could not find page</p>
       </main>
     </>
   );
